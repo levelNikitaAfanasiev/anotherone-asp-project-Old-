@@ -1,0 +1,18 @@
+﻿@model TestTaskMy.Models.Product
+<div>
+    @using (Html.BeginForm())
+    {
+
+        <div>
+            @Html.LabelFor(model => model.Product_name)
+            <p>@Html.EditorFor(model => model.Product_name)</p>
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Category_type.Name)
+            <p> @Html.DropDownListFor(model => model.Category_typeId, ViewBag.Types as SelectList)</p>
+        </div>
+        <p><input type="submit" value="Add" /></p>
+    }
+</div>
+
